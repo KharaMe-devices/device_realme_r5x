@@ -29,7 +29,10 @@ PRODUCT_ENFORCE_RRO_TARGETS := *
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
-    $(LOCAL_PATH)
+    $(LOCAL_PATH) \
+    hardware/qcom/media \
+    hardware/qcom/display \
+    vendor/qcom/opensource/audio-hal/primary-hal
 
 # Vendor properties
 -include $(LOCAL_PATH)/vendor_props.mk
@@ -143,6 +146,10 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/component-overrides.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sysconfig/component-overrides.xml \
     $(LOCAL_PATH)/configs/component-overrides-qti.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/component-overrides.xml
 
+# Cygnus
+TARGET_COMMON_QTI_COMPONENTS += \
+    perf
+
 # Display
 PRODUCT_PACKAGES += \
     android.frameworks.displayservice@1.0_32 \
@@ -195,7 +202,7 @@ PRODUCT_PACKAGES += \
     qcom.fmradio \
     qcom.fmradio.xml
 
-PRODUCT_BOOT_JARS += \
+#PRODUCT_BOOT_JARS += \
     qcom.fmradio
 
 # Freeform Windows
@@ -233,7 +240,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hidl.base@1.0 \
     android.hidl.base@1.0_system \
-    android.hidl.manager@1.0
+    android.hidl.manager@1.0 \
+    android.hidl.base@1.0.vendor \
+    android.hidl.manager@1.0.vendor
 
 # HotwordEnrollement app permissions
 PRODUCT_COPY_FILES += \
@@ -391,7 +400,7 @@ PRODUCT_PACKAGES += \
     qti_telephony_utils.xml \
     telephony-ext
 
-PRODUCT_BOOT_JARS += \
+#PRODUCT_BOOT_JARS += \
     telephony-ext
 
 PRODUCT_COPY_FILES += \

@@ -14,9 +14,9 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/aosp_r5x.mk
+    $(LOCAL_DIR)/cygnus_r5x.mk
 
 COMMON_LUNCH_CHOICES := \
-    aosp_r5x-user \
-    aosp_r5x-userdebug \
-    aosp_r5x-eng
+    cygnus_r5x-user \
+    cygnus_r5x-userdebug \
+    cygnus_r5x-eng

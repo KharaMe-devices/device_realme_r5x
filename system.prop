@@ -46,6 +46,7 @@ ro.vendor.qti.va_odm.support=1
 debug.sf.disable_hwc_vds=1
 persist.hwc.enable_vds=1
 debug.cpurend.vsync=false
+debug.sf.disable_backpressure=1
 
 # Force triple frame buffers
 ro.surface_flinger.max_frame_buffer_acquired_buffers=3

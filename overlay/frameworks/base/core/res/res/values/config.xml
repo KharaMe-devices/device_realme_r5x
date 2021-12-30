@@ -471,4 +471,14 @@
          fading edges is prohibitively expensive on most GPUs. -->
     <bool name="config_ui_enableFadingMarquee">true</bool>
 
+
+    <!-- Flag indicating whether we should enable the adaptive sleep.-->
+    <bool name="config_adaptive_sleep_available">true</bool>
+
+    <!-- List supported color modes. --> 
+     <integer-array name="config_availableColorModes">
+           <item>0</item> <!-- COLOR_MODE_NATURAL -->
+           <item>1</item> <!-- COLOR_MODE_BOOSTED -->
+                            </integer-array>
+
 </resources>
